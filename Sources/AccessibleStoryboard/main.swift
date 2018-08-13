@@ -1,3 +1,11 @@
+import Foundation
 import SWXMLHash
 
-print("Hello, AccessibleStoryboard!")
+let fileManager = FileManager.default
+let currentDirectoryPath = fileManager.currentDirectoryPath
+
+private let storyboardExtension = ".storyboard"
+
+let files = fileManager.subpaths(atPath: currentDirectoryPath)
+let storyboardFiles = files?.filter { $0.hasSuffix(storyboardExtension) }
+print(storyboardFiles!)
