@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "IBDecodable",
+        "repositoryURL": "https://github.com/IBDecodable/IBDecodable",
+        "state": {
+          "branch": null,
+          "revision": "bcbbaef6d8daad7001c824b6514362b286e8539e",
+          "version": null
+        }
+      },
+      {
         "package": "SWXMLHash",
         "repositoryURL": "https://github.com/drmohundro/SWXMLHash.git",
         "state": {
