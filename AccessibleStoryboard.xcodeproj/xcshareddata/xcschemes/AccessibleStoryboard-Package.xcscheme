@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SWXMLHash::SWXMLHash"
+               BuildableName = "SWXMLHash.framework"
+               BlueprintName = "SWXMLHash"
+               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "AccessibleStoryboard::AccessibleStoryboard"
                BuildableName = "AccessibleStoryboard"
                BlueprintName = "AccessibleStoryboard"
@@ -45,9 +59,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AccessibleStoryboard::AccessibleStoryboard"
-            BuildableName = "AccessibleStoryboard"
-            BlueprintName = "AccessibleStoryboard"
+            BlueprintIdentifier = "SWXMLHash::SWXMLHash"
+            BuildableName = "SWXMLHash.framework"
+            BlueprintName = "SWXMLHash"
             ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
