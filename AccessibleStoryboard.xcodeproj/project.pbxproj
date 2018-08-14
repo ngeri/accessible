@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251175512122C5F100B0EA7A /* StoryboardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251175502122C5F100B0EA7A /* StoryboardTemplate.swift */; };
+		251175532122C60B00B0EA7A /* ViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251175522122C60B00B0EA7A /* ViewControllerTemplate.swift */; };
+		251175552122C62700B0EA7A /* ConnectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251175542122C62700B0EA7A /* ConnectionTemplate.swift */; };
 		OBJ_161 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_163 /* Stencil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Stencil::Stencil::Product" /* Stencil.framework */; };
 		OBJ_164 /* Spectre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Spectre::Spectre::Product" /* Spectre.framework */; };
@@ -196,6 +199,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251175502122C5F100B0EA7A /* StoryboardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTemplate.swift; sourceTree = "<group>"; };
+		251175522122C60B00B0EA7A /* ViewControllerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTemplate.swift; sourceTree = "<group>"; };
+		251175542122C62700B0EA7A /* ConnectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTemplate.swift; sourceTree = "<group>"; };
 		"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccessibleStoryboard; sourceTree = BUILT_PRODUCTS_DIR; };
 		"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
@@ -377,6 +383,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2511754F2122C5CE00B0EA7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				251175502122C5F100B0EA7A /* StoryboardTemplate.swift */,
+				251175522122C60B00B0EA7A /* ViewControllerTemplate.swift */,
+				251175542122C62700B0EA7A /* ConnectionTemplate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,7 +586,7 @@
 			path = ".build/checkouts/IBDecodable-6099242166482419742/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -579,7 +595,6 @@
 				OBJ_11 /* Dependencies */,
 				OBJ_149 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_51 /* Models */ = {
@@ -644,6 +659,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2511754F2122C5CE00B0EA7A /* Model */,
 				OBJ_8 /* AccessibleStoryboard */,
 			);
 			name = Sources;
@@ -921,7 +937,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_149 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -947,7 +963,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				251175512122C5F100B0EA7A /* StoryboardTemplate.swift in Sources */,
 				OBJ_161 /* main.swift in Sources */,
+				251175532122C60B00B0EA7A /* ViewControllerTemplate.swift in Sources */,
+				251175552122C62700B0EA7A /* ConnectionTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
