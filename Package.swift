@@ -6,13 +6,12 @@ import PackageDescription
 let package = Package(
     name: "AccessibleStoryboard",
     dependencies: [
-        .package(url: "https://github.com/drmohundro/SWXMLHash.git", from: "4.0.0"),
-        .package(url: "https://github.com/IBDecodable/IBDecodable", .revision("bcbbaef6d8daad7001c824b6514362b286e8539e"))
-
+        .package(url: "https://github.com/IBDecodable/IBDecodable", .revision("bcbbaef6d8daad7001c824b6514362b286e8539e")),
+        .package(url: "https://github.com/stencilproject/Stencil", from: "0.11.0")
     ],
     targets: [
         .target(
             name: "AccessibleStoryboard",
-            dependencies: ["SWXMLHash", "IBDecodable"]),
+            dependencies: ["IBDecodable", "Stencil"]),
     ]
 )
