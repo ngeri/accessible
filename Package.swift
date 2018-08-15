@@ -7,11 +7,11 @@ let package = Package(
     name: "AccessibleStoryboard",
     dependencies: [
         .package(url: "https://github.com/IBDecodable/IBDecodable", .revision("bcbbaef6d8daad7001c824b6514362b286e8539e")),
-        .package(url: "https://github.com/stencilproject/Stencil", from: "0.11.0")
+        .package(url: "https://github.com/SwiftGen/StencilSwiftKit", from: "2.5.0")
     ],
     targets: [
         .target(
             name: "AccessibleStoryboard",
-            dependencies: ["IBDecodable", "Stencil"]),
+            dependencies: ["IBDecodable", /*"Stencil",*/ "StencilSwiftKit"]),
     ]
 )

@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "StencilSwiftKit",
+        "repositoryURL": "https://github.com/SwiftGen/StencilSwiftKit",
+        "state": {
+          "branch": null,
+          "revision": "f15c445ec3c7c5ad44814285e828330bc255bda3",
+          "version": "2.5.0"
+        }
+      },
+      {
         "package": "SWXMLHash",
         "repositoryURL": "https://github.com/drmohundro/SWXMLHash.git",
         "state": {
