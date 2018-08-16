@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_181 /* ConnectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConnectionTemplate.swift */; };
+		251669EC2125A7100033F864 /* ConnectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251669EB2125A7100033F864 /* ConnectionTemplate.swift */; };
+		OBJ_181 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Connection.swift */; };
 		OBJ_182 /* StoryboardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* StoryboardTemplate.swift */; };
 		OBJ_183 /* ViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ViewControllerTemplate.swift */; };
 		OBJ_184 /* ViewProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ViewProtocolExtension.swift */; };
@@ -157,84 +158,84 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		255EB2912124648A0060AF5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
-			remoteInfo = SWXMLHash;
-		};
-		255EB2922124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669DF212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "StencilSwiftKit::StencilSwiftKit";
 			remoteInfo = StencilSwiftKit;
 		};
-		255EB2932124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E0212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Stencil::Stencil";
 			remoteInfo = Stencil;
 		};
-		255EB2942124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E1212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Spectre::Spectre";
 			remoteInfo = Spectre;
 		};
-		255EB2952124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E2212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PathKit::PathKit";
 			remoteInfo = PathKit;
 		};
-		255EB2962124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E3212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Spectre::Spectre";
 			remoteInfo = Spectre;
 		};
-		255EB2972124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E4212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PathKit::PathKit";
 			remoteInfo = PathKit;
 		};
-		255EB2982124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E5212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Stencil::Stencil";
 			remoteInfo = Stencil;
 		};
-		255EB2992124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E6212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Spectre::Spectre";
 			remoteInfo = Spectre;
 		};
-		255EB29A2124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E7212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PathKit::PathKit";
 			remoteInfo = PathKit;
 		};
-		255EB29B2124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E8212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "IBDecodable::IBDecodable";
 			remoteInfo = IBDecodable;
 		};
-		255EB29C2124648A0060AF5C /* PBXContainerItemProxy */ = {
+		251669E9212595030033F864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SWXMLHash::SWXMLHash";
+			remoteInfo = SWXMLHash;
+		};
+		251669EA212595030033F864 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -244,9 +245,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251669EB2125A7100033F864 /* ConnectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTemplate.swift; sourceTree = "<group>"; };
 		"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccessibleStoryboard; sourceTree = BUILT_PRODUCTS_DIR; };
 		"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* ConnectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTemplate.swift; sourceTree = "<group>"; };
+		OBJ_10 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		OBJ_100 /* SearchDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayController.swift; sourceTree = "<group>"; };
 		OBJ_101 /* StoryboardDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardDocument.swift; sourceTree = "<group>"; };
 		OBJ_102 /* TargetRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetRuntime.swift; sourceTree = "<group>"; };
@@ -321,7 +323,7 @@
 		OBJ_28 /* SetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNode.swift; sourceTree = "<group>"; };
 		OBJ_29 /* StencilSwiftTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StencilSwiftTemplate.swift; sourceTree = "<group>"; };
 		OBJ_30 /* SwiftIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIdentifier.swift; sourceTree = "<group>"; };
-		OBJ_32 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngergo100/Documents/Dev/AccessibleStoryboard/.build/checkouts/Stencil-7228218643157267676/Package.swift"; sourceTree = "<group>"; };
+		OBJ_32 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngergo100/Documents/Dev/AccessibleStoryboard/.build/checkouts/Stencil.git-7635584243355970173/Package.swift"; sourceTree = "<group>"; };
 		OBJ_33 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		OBJ_34 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		OBJ_35 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -353,7 +355,7 @@
 		OBJ_63 /* Reporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
 		OBJ_64 /* Reporters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reporters.swift; sourceTree = "<group>"; };
 		OBJ_65 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngergo100/Documents/Dev/AccessibleStoryboard/.build/checkouts/Spectre.git--7655155069707042687/Package.swift"; sourceTree = "<group>"; };
-		OBJ_67 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngergo100/Documents/Dev/AccessibleStoryboard/.build/checkouts/IBDecodable-6099242166482419742/Package.swift"; sourceTree = "<group>"; };
+		OBJ_67 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngergo100/Documents/Dev/AccessibleStoryboard/.build/checkouts/IBDecodable-1307698157490079347/Package.swift"; sourceTree = "<group>"; };
 		OBJ_68 /* IBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBError.swift; sourceTree = "<group>"; };
 		OBJ_69 /* IBProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBProtocol.swift; sourceTree = "<group>"; };
 		OBJ_71 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
@@ -600,13 +602,13 @@
 		OBJ_168 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */,
-				"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */,
 				"SWXMLHash::SWXMLHash::Product" /* SWXMLHash.framework */,
-				"Stencil::Stencil::Product" /* Stencil.framework */,
+				"PathKit::PathKit::Product" /* PathKit.framework */,
+				"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */,
 				"Spectre::Spectre::Product" /* Spectre.framework */,
 				"StencilSwiftKit::StencilSwiftKit::Product" /* StencilSwiftKit.framework */,
-				"PathKit::PathKit::Product" /* PathKit.framework */,
+				"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */,
+				"Stencil::Stencil::Product" /* Stencil.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -664,7 +666,7 @@
 				OBJ_51 /* Variable.swift */,
 			);
 			name = "Stencil 0.11.0";
-			path = ".build/checkouts/Stencil-7228218643157267676/Sources";
+			path = ".build/checkouts/Stencil.git-7635584243355970173/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_5 /*  */ = {
@@ -725,7 +727,7 @@
 				OBJ_157 /* XMLDecodable */,
 			);
 			name = IBDecodable;
-			path = ".build/checkouts/IBDecodable-6099242166482419742/Sources";
+			path = ".build/checkouts/IBDecodable-1307698157490079347/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_7 /* Sources */ = {
@@ -809,7 +811,8 @@
 		OBJ_9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_10 /* ConnectionTemplate.swift */,
+				251669EB2125A7100033F864 /* ConnectionTemplate.swift */,
+				OBJ_10 /* Connection.swift */,
 				OBJ_11 /* StoryboardTemplate.swift */,
 				OBJ_12 /* ViewControllerTemplate.swift */,
 			);
@@ -1101,9 +1104,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_181 /* ConnectionTemplate.swift in Sources */,
+				OBJ_181 /* Connection.swift in Sources */,
 				OBJ_182 /* StoryboardTemplate.swift in Sources */,
 				OBJ_183 /* ViewControllerTemplate.swift in Sources */,
+				251669EC2125A7100033F864 /* ConnectionTemplate.swift in Sources */,
 				OBJ_184 /* ViewProtocolExtension.swift in Sources */,
 				OBJ_185 /* main.swift in Sources */,
 			);
@@ -1336,62 +1340,62 @@
 		OBJ_193 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StencilSwiftKit::StencilSwiftKit" /* StencilSwiftKit */;
-			targetProxy = 255EB2922124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669DF212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Stencil::Stencil" /* Stencil */;
-			targetProxy = 255EB2982124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E5212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_197 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Spectre::Spectre" /* Spectre */;
-			targetProxy = 255EB2992124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E6212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_199 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PathKit::PathKit" /* PathKit */;
-			targetProxy = 255EB29A2124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E7212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_201 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "IBDecodable::IBDecodable" /* IBDecodable */;
-			targetProxy = 255EB29B2124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E8212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_203 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
-			targetProxy = 255EB29C2124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669EA212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_298 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SWXMLHash::SWXMLHash" /* SWXMLHash */;
-			targetProxy = 255EB2912124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E9212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_376 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Spectre::Spectre" /* Spectre */;
-			targetProxy = 255EB2942124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E1212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_377 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PathKit::PathKit" /* PathKit */;
-			targetProxy = 255EB2952124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E2212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_403 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Stencil::Stencil" /* Stencil */;
-			targetProxy = 255EB2932124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E0212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_404 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Spectre::Spectre" /* Spectre */;
-			targetProxy = 255EB2962124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E3212595030033F864 /* PBXContainerItemProxy */;
 		};
 		OBJ_405 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PathKit::PathKit" /* PathKit */;
-			targetProxy = 255EB2972124648A0060AF5C /* PBXContainerItemProxy */;
+			targetProxy = 251669E4212595030033F864 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

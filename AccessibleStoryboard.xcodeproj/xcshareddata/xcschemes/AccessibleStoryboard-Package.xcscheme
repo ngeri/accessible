@@ -56,20 +56,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Stencil::Stencil"
-               BuildableName = "Stencil.framework"
-               BlueprintName = "Stencil"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Spectre::Spectre"
                BuildableName = "Spectre.framework"
                BlueprintName = "Spectre"
@@ -84,9 +70,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "StencilSwiftKit::StencilSwiftKit"
+               BuildableName = "StencilSwiftKit.framework"
+               BlueprintName = "StencilSwiftKit"
+               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "IBDecodable::IBDecodable"
                BuildableName = "IBDecodable.framework"
                BlueprintName = "IBDecodable"
+               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Stencil::Stencil"
+               BuildableName = "Stencil.framework"
+               BlueprintName = "Stencil"
                ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

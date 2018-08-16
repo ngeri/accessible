@@ -17,13 +17,18 @@ storyboardFiles?.forEach({ storyboardFile in
         let file = try StoryboardFile(path: storyboardFile)
 
         let viewControllerTemplates: [ViewControllerTemplate]? = file.document.scenes?.compactMap({ scene -> ViewControllerTemplate? in
-            guard let viewController = scene.viewController, let connections = viewController.viewController.connections else  {
-                print("Error for outlet: \(String(describing: scene.viewController?.viewController.customClass ?? scene.viewController?.viewController.elementClass))")
+            guard let viewController = scene.viewController else  {
+                print("An error occured for scene with id: \(scene.id)")
+                return nil
+            }
+
+            guard let connections = viewController.viewController.connections else {
+                print("\(String(describing: viewController.viewController.customClass ?? "")) has no connections")
                 return nil
             }
             let outlets: [Outlet] = connections.compactMap {
                 guard let connection = $0.connection as? Outlet else {
-                    print("Connection is not Outlet: \($0.connection)")
+                    print("Connection is not an Outlet with name: \($0.connection)")
                     return nil
                 }
                 return connection
@@ -32,20 +37,30 @@ storyboardFiles?.forEach({ storyboardFile in
             if let rootView = viewController.viewController.rootView {
                 allViews.append(rootView)
                 allViews.append(contentsOf: rootView.getAllSubview())
-
             }
             var viewControllerName = viewController.viewController.elementClass
             if let customClass = viewController.viewController.customClass, let range = customClass.range(of: "ViewController") {
                 viewControllerName = String(customClass[..<range.lowerBound])
             }
-            if allViews.count < outlets.count { print("There must be some error") }
-            return ViewControllerTemplate(name: viewControllerName, connections: outlets.compactMap { outlet in
+
+            let mappedConnections = outlets.reduce(into: [String: [Connection]](), { result, outlet in
                 guard let view = allViews.filter({ $0.id == outlet.destination }).first else {
-                    print("Error for outlet: \(outlet.property)")
-                    return nil
+                    print("Outlet with name: \(outlet.property) has no view attached.")
+                    return
                 }
-                return ConnectionTemplate(name: outlet.property, type: view.elementClass)
+
+                if result[view.elementClass] != nil {
+                    result[view.elementClass]?.append(Connection(name: outlet.property))
+                } else {
+                    result[view.elementClass] = [Connection(name: outlet.property)]
+                }
             })
+
+            let templateConnections: [ConnectionTemplate] = mappedConnections.map { key, value in
+                return ConnectionTemplate(type: key, connections: value)
+            }
+
+            return ViewControllerTemplate(name: viewControllerName, connections: templateConnections)
         })
         guard let unwrappedViewControllerTemplates = viewControllerTemplates else { exit(0) }
         let storyboardName = ((storyboardFile as NSString).lastPathComponent as NSString).deletingPathExtension
@@ -56,17 +71,14 @@ storyboardFiles?.forEach({ storyboardFile in
     }
 })
 
-let templateAccessibilityIdentifiers = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-accessibilityIdentifiers.stencil").read(),
-                                                                environment: stencilSwiftEnvironment())
-let templateTapMan = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-tapMan.stencil").read(),
-                                                                environment: stencilSwiftEnvironment())
-let templateViewControllerExtension = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-viewControllerExtension.stencil").read(),
-                                                                environment: stencilSwiftEnvironment())
+let templateAccessibilityIdentifiers = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-accessibilityIdentifiers.stencil").read(), environment: stencilSwiftEnvironment())
+//let templateTapMan = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-tapMan.stencil").read(), environment: stencilSwiftEnvironment())
+let templateViewControllerExtension = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-viewControllerExtension.stencil").read(), environment: stencilSwiftEnvironment())
 
 let context = ["storyboards": storyboardTemplates]
 let enriched = try StencilContext.enrich(context: context, parameters: [])
 let renderedAccessibilityIdentifiers = try templateAccessibilityIdentifiers.render(enriched)
-let renderedTapMan = try templateTapMan.render(enriched)
+//let renderedTapMan = try templateTapMan.render(enriched)
 let renderedViewControllerExtension = try templateViewControllerExtension.render(enriched)
 print(renderedAccessibilityIdentifiers)
 //print(renderedTapMan)

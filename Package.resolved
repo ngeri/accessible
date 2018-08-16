@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "IBDecodable",
-        "repositoryURL": "https://github.com/IBDecodable/IBDecodable",
+        "repositoryURL": "https://github.com/ngergo100/IBDecodable",
         "state": {
           "branch": null,
-          "revision": "bcbbaef6d8daad7001c824b6514362b286e8539e",
+          "revision": "f5323c2231811256e49f5c5fc723467a7965f5fa",
           "version": null
         }
       },
@@ -30,7 +30,7 @@
       },
       {
         "package": "Stencil",
-        "repositoryURL": "https://github.com/stencilproject/Stencil",
+        "repositoryURL": "https://github.com/kylef/Stencil.git",
         "state": {
           "branch": null,
           "revision": "c2e25f25acfbe24442809c055141d8323af8f6cc",
