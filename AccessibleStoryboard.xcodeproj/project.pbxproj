@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		251669EC2125A7100033F864 /* ConnectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251669EB2125A7100033F864 /* ConnectionTemplate.swift */; };
-		OBJ_181 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Connection.swift */; };
+		251669EC2125A7100033F864 /* ConnectionTypeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251669EB2125A7100033F864 /* ConnectionTypeTemplate.swift */; };
+		25B9CB4D21261F330040B93F /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B9CB4C21261F330040B93F /* DateFormatterExtension.swift */; };
+		25BD526E21260B2200FBB880 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BD526D21260B2200FBB880 /* Templates.swift */; };
+		OBJ_181 /* ConnectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ConnectionTemplate.swift */; };
 		OBJ_182 /* StoryboardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* StoryboardTemplate.swift */; };
 		OBJ_183 /* ViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ViewControllerTemplate.swift */; };
 		OBJ_184 /* ViewProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ViewProtocolExtension.swift */; };
@@ -245,10 +247,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		251669EB2125A7100033F864 /* ConnectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTemplate.swift; sourceTree = "<group>"; };
+		251669EB2125A7100033F864 /* ConnectionTypeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTypeTemplate.swift; sourceTree = "<group>"; };
+		25B9CB4C21261F330040B93F /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		25BD526D21260B2200FBB880 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
 		"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccessibleStoryboard; sourceTree = BUILT_PRODUCTS_DIR; };
 		"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		OBJ_10 /* ConnectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTemplate.swift; sourceTree = "<group>"; };
 		OBJ_100 /* SearchDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayController.swift; sourceTree = "<group>"; };
 		OBJ_101 /* StoryboardDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardDocument.swift; sourceTree = "<group>"; };
 		OBJ_102 /* TargetRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetRuntime.swift; sourceTree = "<group>"; };
@@ -455,6 +459,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25B9CB4E2126228A0040B93F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25BD526D21260B2200FBB880 /* Templates.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25BD526C21260A0800FBB880 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* ViewProtocolExtension.swift */,
+				25B9CB4C21261F330040B93F /* DateFormatterExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		OBJ_104 /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,7 +690,7 @@
 			path = ".build/checkouts/Stencil.git-7635584243355970173/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -678,7 +699,6 @@
 				OBJ_16 /* Dependencies */,
 				OBJ_168 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_52 /* PathKit 0.9.1 */ = {
@@ -775,9 +795,10 @@
 		OBJ_8 /* AccessibleStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Models */,
-				OBJ_13 /* ViewProtocolExtension.swift */,
 				OBJ_14 /* main.swift */,
+				25BD526C21260A0800FBB880 /* Helpers */,
+				OBJ_9 /* Models */,
+				25B9CB4E2126228A0040B93F /* Resources */,
 			);
 			name = AccessibleStoryboard;
 			path = Sources/AccessibleStoryboard;
@@ -811,8 +832,8 @@
 		OBJ_9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				251669EB2125A7100033F864 /* ConnectionTemplate.swift */,
-				OBJ_10 /* Connection.swift */,
+				OBJ_10 /* ConnectionTemplate.swift */,
+				251669EB2125A7100033F864 /* ConnectionTypeTemplate.swift */,
 				OBJ_11 /* StoryboardTemplate.swift */,
 				OBJ_12 /* ViewControllerTemplate.swift */,
 			);
@@ -845,6 +866,7 @@
 			buildPhases = (
 				OBJ_180 /* Sources */,
 				OBJ_186 /* Frameworks */,
+				25B9CB4A2126116F0040B93F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1076,7 +1098,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_168 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1099,16 +1121,28 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		25B9CB4A2126116F0040B93F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_180 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_181 /* Connection.swift in Sources */,
+				25BD526E21260B2200FBB880 /* Templates.swift in Sources */,
+				OBJ_181 /* ConnectionTemplate.swift in Sources */,
 				OBJ_182 /* StoryboardTemplate.swift in Sources */,
 				OBJ_183 /* ViewControllerTemplate.swift in Sources */,
-				251669EC2125A7100033F864 /* ConnectionTemplate.swift in Sources */,
+				251669EC2125A7100033F864 /* ConnectionTypeTemplate.swift in Sources */,
 				OBJ_184 /* ViewProtocolExtension.swift in Sources */,
+				25B9CB4D21261F330040B93F /* DateFormatterExtension.swift in Sources */,
 				OBJ_185 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

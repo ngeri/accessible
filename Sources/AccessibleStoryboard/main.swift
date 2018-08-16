@@ -43,21 +43,23 @@ storyboardFiles?.forEach({ storyboardFile in
                 viewControllerName = String(customClass[..<range.lowerBound])
             }
 
-            let mappedConnections = outlets.reduce(into: [String: [Connection]](), { result, outlet in
+            let mappedConnections = outlets.reduce(into: [ConnectionTypeTemplate.ViewType: [ConnectionTemplate]](), { result, outlet in
                 guard let view = allViews.filter({ $0.id == outlet.destination }).first else {
                     print("Outlet with name: \(outlet.property) has no view attached.")
                     return
                 }
 
-                if result[view.elementClass] != nil {
-                    result[view.elementClass]?.append(Connection(name: outlet.property))
+                let viewType = ConnectionTypeTemplate.mapViewClassToViewType(type: view.elementClass)
+
+                if result[viewType] != nil {
+                    result[viewType]?.append(ConnectionTemplate(name: outlet.property))
                 } else {
-                    result[view.elementClass] = [Connection(name: outlet.property)]
+                    result[viewType] = [ConnectionTemplate(name: outlet.property)]
                 }
             })
 
-            let templateConnections: [ConnectionTemplate] = mappedConnections.map { key, value in
-                return ConnectionTemplate(type: key, connections: value)
+            let templateConnections: [ConnectionTypeTemplate] = mappedConnections.map { name, connections in
+                return ConnectionTypeTemplate(name: name, connections: connections)
             }
 
             return ViewControllerTemplate(name: viewControllerName, connections: templateConnections)
@@ -71,15 +73,17 @@ storyboardFiles?.forEach({ storyboardFile in
     }
 })
 
-let templateAccessibilityIdentifiers = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-accessibilityIdentifiers.stencil").read(), environment: stencilSwiftEnvironment())
-//let templateTapMan = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-tapMan.stencil").read(), environment: stencilSwiftEnvironment())
-let templateViewControllerExtension = try StencilSwiftTemplate(templateString: Path("/Users/ngergo100/Desktop/template-viewControllerExtension.stencil").read(), environment: stencilSwiftEnvironment())
-
-let context = ["storyboards": storyboardTemplates]
+let context: [String: Any] = ["storyboards": storyboardTemplates,
+                              "date": DateFormatter.as.string(from: Date())]
 let enriched = try StencilContext.enrich(context: context, parameters: [])
-let renderedAccessibilityIdentifiers = try templateAccessibilityIdentifiers.render(enriched)
-//let renderedTapMan = try templateTapMan.render(enriched)
-let renderedViewControllerExtension = try templateViewControllerExtension.render(enriched)
-print(renderedAccessibilityIdentifiers)
-//print(renderedTapMan)
-print(renderedViewControllerExtension)
+
+let accessibilityIdentifiersTemplate = StencilSwiftTemplate(templateString: accessibilityIdentifiers, environment: stencilSwiftEnvironment())
+let tapManTemplate                   = StencilSwiftTemplate(templateString: tapMans, environment: stencilSwiftEnvironment())
+let extensionsTemplate               = StencilSwiftTemplate(templateString: extensions, environment: stencilSwiftEnvironment())
+
+let accessibilityIdentifiersRendered = try accessibilityIdentifiersTemplate.render(enriched)
+let tapManRendered                   = try tapManTemplate.render(enriched)
+let extensionsRendered               = try extensionsTemplate.render(enriched)
+print(accessibilityIdentifiersRendered)
+print(tapManRendered)
+print(extensionsRendered)
