@@ -18,17 +18,17 @@ storyboardFiles?.forEach({ storyboardFile in
 
         let viewControllerTemplates: [ViewControllerTemplate]? = file.document.scenes?.compactMap({ scene -> ViewControllerTemplate? in
             guard let viewController = scene.viewController else  {
-                print("An error occured for scene with id: \(scene.id)")
+                log.message(.error, "An error occured for scene with id: \(scene.id)")
                 return nil
             }
 
             guard let connections = viewController.viewController.connections else {
-                print("\(String(describing: viewController.viewController.customClass ?? "")) has no connections")
+                log.message(.info, "\(String(describing: viewController.viewController.customClass ?? "")) has no connections")
                 return nil
             }
             let outlets: [Outlet] = connections.compactMap {
                 guard let connection = $0.connection as? Outlet else {
-                    print("Connection is not an Outlet with name: \($0.connection)")
+                    log.message(.info, "Connection is not an Outlet with object: \($0.connection)")
                     return nil
                 }
                 return connection
@@ -45,7 +45,7 @@ storyboardFiles?.forEach({ storyboardFile in
 
             let mappedConnections = outlets.reduce(into: [ConnectionTypeTemplate.ViewType: [ConnectionTemplate]](), { result, outlet in
                 guard let view = allViews.filter({ $0.id == outlet.destination }).first else {
-                    print("Outlet with name: \(outlet.property) has no view attached.")
+                    log.message(.info, "Outlet with name '\(outlet.property)' has no view attached.")
                     return
                 }
 
@@ -69,7 +69,7 @@ storyboardFiles?.forEach({ storyboardFile in
         let storyboardTemplate = StoryboardTemplate(name: storyboardName, viewControllers: unwrappedViewControllerTemplates)
         storyboardTemplates.append(storyboardTemplate)
     } catch let error {
-        print("Something bad happened: \(error)")
+        log.message(.error, "Something really bad happened: \(error)")
     }
 })
 
@@ -84,6 +84,8 @@ let extensionsTemplate               = StencilSwiftTemplate(templateString: exte
 let accessibilityIdentifiersRendered = try accessibilityIdentifiersTemplate.render(enriched)
 let tapManRendered                   = try tapManTemplate.render(enriched)
 let extensionsRendered               = try extensionsTemplate.render(enriched)
-print(accessibilityIdentifiersRendered)
-print(tapManRendered)
-print(extensionsRendered)
+
+
+write(content: accessibilityIdentifiersRendered, to: "AccessibilityIdentifiers.swift")
+write(content: tapManRendered, to: "TapMans.swift")
+write(content: extensionsRendered, to: "Extensions.swift")
