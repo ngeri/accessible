@@ -1,4 +1,6 @@
+import Foundation
+
 struct ViewControllerTemplate {
     let name: String
-    let connections: [ConnectionTemplate]
+    let connections: [ConnectionTypeTemplate]
 }
