@@ -3,17 +3,22 @@ import IBDecodable
 import StencilSwiftKit
 import PathKit
 
-let fileManager = FileManager.default
-let currentDirectoryPath = fileManager.currentDirectoryPath
 
-private let storyboardExtension = ".storyboard"
+guard let configuration = ConfigurationFactory.readConfiguration() else {
+    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/AccessibleStoryboard/blob/master/README.md")
+    exit(0)
+}
 
-let files = fileManager.subpaths(atPath: currentDirectoryPath)
-let storyboardFiles = files?.filter { $0.hasSuffix(storyboardExtension) }
+let storyboardFileNames = configuration.storyboardFileNames
+guard storyboardFileNames.count > 0 else {
+    log.message(.error, "There are no storyboard files at path: \"\(configuration.input)\"")
+    exit(0)
+}
 
 var storyboardTemplates = [StoryboardTemplate]()
-storyboardFiles?.forEach({ storyboard in
+configuration.storyboardFileNames.forEach({ storyboard in
     do  {
+        log.message(.info, "Processing storyboard: \(storyboard)")
         let file = try StoryboardFile(path: storyboard)
 
         let viewControllerTemplates: [ViewControllerTemplate]? = file.document.scenes?.compactMap({ scene -> ViewControllerTemplate? in
@@ -66,7 +71,7 @@ storyboardFiles?.forEach({ storyboard in
         })
         guard let unwrappedViewControllerTemplates = viewControllerTemplates else {
             log.message(.error, "IBDecodable failed to decode storyboard named: \(storyboard)")
-            exit(0)
+            return
         }
         let storyboardName = ((storyboard as NSString).lastPathComponent as NSString).deletingPathExtension
         let storyboardTemplate = StoryboardTemplate(name: storyboardName, viewControllers: unwrappedViewControllerTemplates)
@@ -76,9 +81,9 @@ storyboardFiles?.forEach({ storyboard in
     }
 })
 
-let context: [String: Any] = ["storyboards": storyboardTemplates,
+let context: [String: Any] = ["accessibiltyEnumName": configuration.enumName ?? "Accessible",
                               "date": DateFormatter.as.string(from: Date()),
-                              "accessibiltyEnumName": "Accessible"]
+                              "storyboards": storyboardTemplates]
 let enriched = try StencilContext.enrich(context: context, parameters: [])
 
 let accessibilityIdentifiersTemplate = StencilSwiftTemplate(templateString: accessibilityIdentifiers, environment: stencilSwiftEnvironment())
@@ -90,6 +95,6 @@ let extensionsRendered               = try extensionsTemplate.render(enriched)
 let tapManRendered                   = try tapManTemplate.render(enriched)
 
 
-write(content: accessibilityIdentifiersRendered, to: "AccessibilityIdentifiers.swift")
-write(content: extensionsRendered, to: "Extensions.swift")
-write(content: tapManRendered, to: "TapMans.swift")
+write(content: accessibilityIdentifiersRendered, to: "\(configuration.output)/AccessibilityIdentifiers.swift")
+write(content: extensionsRendered, to: "\(configuration.output)/Extensions.swift")
+write(content: tapManRendered, to: "\(configuration.output)/TapMans.swift")

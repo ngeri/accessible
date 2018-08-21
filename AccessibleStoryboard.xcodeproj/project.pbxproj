@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251EBEEC212C594200289CF0 /* ConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBEEB212C594200289CF0 /* ConfigurationFactory.swift */; };
 		OBJ_221 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DateFormatterExtension.swift */; };
 		OBJ_222 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Logger.swift */; };
 		OBJ_223 /* OutputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* OutputHandler.swift */; };
@@ -296,6 +297,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251EBEEB212C594200289CF0 /* ConfigurationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationFactory.swift; sourceTree = "<group>"; };
 		"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccessibleStoryboard; sourceTree = BUILT_PRODUCTS_DIR; };
 		"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
@@ -892,7 +894,7 @@
 			path = ".build/checkouts/Yams.git-8068124914099325722/Sources/Yams";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -901,7 +903,6 @@
 				OBJ_23 /* Dependencies */,
 				OBJ_206 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_55 /* StencilSwiftKit 2.5.0 */ = {
@@ -983,6 +984,7 @@
 		OBJ_9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				251EBEEB212C594200289CF0 /* ConfigurationFactory.swift */,
 				OBJ_10 /* DateFormatterExtension.swift */,
 				OBJ_11 /* Logger.swift */,
 				OBJ_12 /* OutputHandler.swift */,
@@ -1315,7 +1317,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_206 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1349,6 +1351,7 @@
 				OBJ_221 /* DateFormatterExtension.swift in Sources */,
 				OBJ_222 /* Logger.swift in Sources */,
 				OBJ_223 /* OutputHandler.swift in Sources */,
+				251EBEEC212C594200289CF0 /* ConfigurationFactory.swift in Sources */,
 				OBJ_224 /* ViewProtocolExtension.swift in Sources */,
 				OBJ_225 /* ConnectionTemplate.swift in Sources */,
 				OBJ_226 /* ConnectionTypeTemplate.swift in Sources */,
