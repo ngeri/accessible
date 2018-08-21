@@ -5,7 +5,7 @@ func write(content: String, to: String) {
     log.message(.info, "Writing to \(path)")
     do {
         if try path.exists && path.read(.utf8) == content {
-            log.message(.info, "Not writing the file as content is unchanged")
+            log.message(.info, "Not writing the file as content is unchanged") // TODO: Needs to handle first line which contains current date
             return
         }
         try path.write(content)
@@ -13,5 +13,4 @@ func write(content: String, to: String) {
     } catch let error {
         log.message(.error, error.localizedDescription)
     }
-
 }

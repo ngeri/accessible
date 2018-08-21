@@ -1,7 +1,6 @@
 import Foundation
 
 struct ConnectionTypeTemplate {
-
     let name: String
     let connections: [ConnectionTemplate]
 
@@ -11,7 +10,7 @@ struct ConnectionTypeTemplate {
         case buttons = "buttons"
         case collectionViews = "collectionViews"
         case datePickers = "datePickers"
-        case imageViews = "imageViews"
+        case imageViews = "images"
         case staticTexts = "staticTexts"
         case navigationBars = "navigationBars"
         case pageIndicators = "pageIndicators"

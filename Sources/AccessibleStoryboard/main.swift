@@ -12,9 +12,9 @@ let files = fileManager.subpaths(atPath: currentDirectoryPath)
 let storyboardFiles = files?.filter { $0.hasSuffix(storyboardExtension) }
 
 var storyboardTemplates = [StoryboardTemplate]()
-storyboardFiles?.forEach({ storyboardFile in
+storyboardFiles?.forEach({ storyboard in
     do  {
-        let file = try StoryboardFile(path: storyboardFile)
+        let file = try StoryboardFile(path: storyboard)
 
         let viewControllerTemplates: [ViewControllerTemplate]? = file.document.scenes?.compactMap({ scene -> ViewControllerTemplate? in
             guard let viewController = scene.viewController else  {
@@ -36,7 +36,7 @@ storyboardFiles?.forEach({ storyboardFile in
             var allViews = [ViewProtocol]()
             if let rootView = viewController.viewController.rootView {
                 allViews.append(rootView)
-                allViews.append(contentsOf: rootView.getAllSubview())
+                allViews.append(contentsOf: rootView.getAllSubviews())
             }
             var viewControllerName = viewController.viewController.elementClass
             if let customClass = viewController.viewController.customClass, let range = customClass.range(of: "ViewController") {
@@ -64,8 +64,11 @@ storyboardFiles?.forEach({ storyboardFile in
 
             return ViewControllerTemplate(name: viewControllerName, connections: templateConnections)
         })
-        guard let unwrappedViewControllerTemplates = viewControllerTemplates else { exit(0) }
-        let storyboardName = ((storyboardFile as NSString).lastPathComponent as NSString).deletingPathExtension
+        guard let unwrappedViewControllerTemplates = viewControllerTemplates else {
+            log.message(.error, "IBDecodable failed to decode storyboard named: \(storyboard)")
+            exit(0)
+        }
+        let storyboardName = ((storyboard as NSString).lastPathComponent as NSString).deletingPathExtension
         let storyboardTemplate = StoryboardTemplate(name: storyboardName, viewControllers: unwrappedViewControllerTemplates)
         storyboardTemplates.append(storyboardTemplate)
     } catch let error {
@@ -74,18 +77,19 @@ storyboardFiles?.forEach({ storyboardFile in
 })
 
 let context: [String: Any] = ["storyboards": storyboardTemplates,
-                              "date": DateFormatter.as.string(from: Date())]
+                              "date": DateFormatter.as.string(from: Date()),
+                              "accessibiltyEnumName": "Accessible"]
 let enriched = try StencilContext.enrich(context: context, parameters: [])
 
 let accessibilityIdentifiersTemplate = StencilSwiftTemplate(templateString: accessibilityIdentifiers, environment: stencilSwiftEnvironment())
-let tapManTemplate                   = StencilSwiftTemplate(templateString: tapMans, environment: stencilSwiftEnvironment())
 let extensionsTemplate               = StencilSwiftTemplate(templateString: extensions, environment: stencilSwiftEnvironment())
+let tapManTemplate                   = StencilSwiftTemplate(templateString: tapMans, environment: stencilSwiftEnvironment())
 
 let accessibilityIdentifiersRendered = try accessibilityIdentifiersTemplate.render(enriched)
-let tapManRendered                   = try tapManTemplate.render(enriched)
 let extensionsRendered               = try extensionsTemplate.render(enriched)
+let tapManRendered                   = try tapManTemplate.render(enriched)
 
 
 write(content: accessibilityIdentifiersRendered, to: "AccessibilityIdentifiers.swift")
-write(content: tapManRendered, to: "TapMans.swift")
 write(content: extensionsRendered, to: "Extensions.swift")
+write(content: tapManRendered, to: "TapMans.swift")
