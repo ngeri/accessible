@@ -22,7 +22,7 @@ enum Accessible {
 }
 ```
 UITestableExtensions.swift makes setting the previously generated id-s for every UIElement easy.
-If you provide UITestableExtensions.swift path then **Accessible** will also generate Swift file like below.
+If you provide UITestableExtensions.swift path then **Accessible** will also generate a Swift file like below.
 ```swift
 
 protocol UITestable {
@@ -85,7 +85,7 @@ Uncomment `testableExtensionsPath` if you would like **Accessible** to generate 
 
 Uncomment `tapMansPath` if you would like **Accessible** to generate UITapMans.swift file for you.
 
-If your done with the configuration file. The only thing left is calling `accessible` in the root directory of your project or set up a new run script build phase in your XCode project file.
+If your done with the configuration file. The only thing left is calling `accessible` in the root directory of your project or set up a new run script build phase in your Xcode project file.
 
 
 
