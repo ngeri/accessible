@@ -14,52 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "IBDecodable::IBDecodable"
-               BuildableName = "IBDecodable.framework"
-               BlueprintName = "IBDecodable"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Spectre::Spectre"
-               BuildableName = "Spectre.framework"
-               BlueprintName = "Spectre"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SWXMLHash::SWXMLHash"
-               BuildableName = "SWXMLHash.framework"
-               BlueprintName = "SWXMLHash"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Yams::CYaml"
                BuildableName = "CYaml.framework"
                BlueprintName = "CYaml"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+               ReferencedContainer = "container:accessible.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -73,35 +31,7 @@
                BlueprintIdentifier = "Stencil::Stencil"
                BuildableName = "Stencil.framework"
                BlueprintName = "Stencil"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PathKit::PathKit"
-               BuildableName = "PathKit.framework"
-               BlueprintName = "PathKit"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Yams::Yams"
-               BuildableName = "Yams.framework"
-               BlueprintName = "Yams"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+               ReferencedContainer = "container:accessible.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -115,7 +45,7 @@
                BlueprintIdentifier = "StencilSwiftKit::StencilSwiftKit"
                BuildableName = "StencilSwiftKit.framework"
                BlueprintName = "StencilSwiftKit"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+               ReferencedContainer = "container:accessible.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -126,10 +56,80 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AccessibleStoryboard::AccessibleStoryboard"
-               BuildableName = "AccessibleStoryboard"
-               BlueprintName = "AccessibleStoryboard"
-               ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+               BlueprintIdentifier = "accessible::accessible"
+               BuildableName = "accessible"
+               BlueprintName = "accessible"
+               ReferencedContainer = "container:accessible.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PathKit::PathKit"
+               BuildableName = "PathKit.framework"
+               BlueprintName = "PathKit"
+               ReferencedContainer = "container:accessible.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Yams::Yams"
+               BuildableName = "Yams.framework"
+               BlueprintName = "Yams"
+               ReferencedContainer = "container:accessible.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "IBDecodable::IBDecodable"
+               BuildableName = "IBDecodable.framework"
+               BlueprintName = "IBDecodable"
+               ReferencedContainer = "container:accessible.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SWXMLHash::SWXMLHash"
+               BuildableName = "SWXMLHash.framework"
+               BlueprintName = "SWXMLHash"
+               ReferencedContainer = "container:accessible.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Spectre::Spectre"
+               BuildableName = "Spectre.framework"
+               BlueprintName = "Spectre"
+               ReferencedContainer = "container:accessible.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -157,10 +157,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "IBDecodable::IBDecodable"
-            BuildableName = "IBDecodable.framework"
-            BlueprintName = "IBDecodable"
-            ReferencedContainer = "container:AccessibleStoryboard.xcodeproj">
+            BlueprintIdentifier = "Yams::CYaml"
+            BuildableName = "CYaml.framework"
+            BlueprintName = "CYaml"
+            ReferencedContainer = "container:accessible.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>

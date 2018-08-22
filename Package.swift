@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "AccessibleStoryboard",
+    name: "accessible",
     dependencies: [
         .package(url: "https://github.com/ngergo100/IBDecodable", .revision("f5323c2231811256e49f5c5fc723467a7965f5fa")),
         .package(url: "https://github.com/SwiftGen/StencilSwiftKit", from: "2.5.0"),
@@ -12,7 +12,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "AccessibleStoryboard",
+            name: "accessible",
             dependencies: ["IBDecodable", "StencilSwiftKit", "Yams"]),
     ]
 )

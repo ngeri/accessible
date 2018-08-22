@@ -4,7 +4,7 @@ import PathKit
 
 
 guard let configuration = ConfigurationFactory.readConfiguration() else {
-    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/AccessibleStoryboard")
+    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/Accessible")
     exit(0)
 }
 
