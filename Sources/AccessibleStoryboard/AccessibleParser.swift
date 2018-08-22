@@ -5,7 +5,7 @@ struct AccessibleParser {
     static func decodeStoryboards(with storyboardPaths: [String]) -> [StoryboardTemplate] {
         let storyboardTemplates: [StoryboardTemplate] = storyboardPaths.compactMap({ storyboardPath in
             do  {
-                log.message(.info, "Processing storyboard: \(storyboardPath)")
+                log.message(.info, "Processing \((storyboardPath as NSString).lastPathComponent)...")
                 let file = try StoryboardFile(path: storyboardPath)
 
                 let viewControllerTemplates: [ViewControllerTemplate]? = file.document.scenes?.compactMap({ scene -> ViewControllerTemplate? in

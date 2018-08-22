@@ -2,11 +2,16 @@ import Foundation
 import PathKit
 import Yams
 
-struct Configuration: Codable {
+struct OutputConfiguration: Decodable {
+    let identifiersPath: String
+    let testableExtensionsPath: String?
+    let tapMansPath: String?
+}
+
+struct Configuration: Decodable {
     let inputs: [String]
-    let output: String
+    let outputs: OutputConfiguration
     let enumName: String?
-    let tapManOutput: String?
 }
 
 struct ConfigurationFactory {

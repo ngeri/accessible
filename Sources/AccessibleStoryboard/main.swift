@@ -4,7 +4,7 @@ import PathKit
 
 
 guard let configuration = ConfigurationFactory.readConfiguration() else {
-    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/AccessibleStoryboard/blob/master/README.md")
+    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/AccessibleStoryboard")
     exit(0)
 }
 
@@ -30,8 +30,10 @@ let extensionsRendered               = try extensionsTemplate.render(enriched)
 let tapManRendered                   = try tapManTemplate.render(enriched)
 
 
-write(content: accessibilityIdentifiersRendered, to: "\(configuration.output)/AccessibilityIdentifiers.swift")
-write(content: extensionsRendered, to: "\(configuration.output)/UITestableExtensions.swift")
-if let tapManOutput = configuration.tapManOutput {
-    write(content: tapManRendered, to: "\(tapManOutput)/TapMans.swift")
+write(content: accessibilityIdentifiersRendered, to: "\(configuration.outputs.identifiersPath)/AccessibilityIdentifiers.swift")
+if let testableExtensionsPath = configuration.outputs.testableExtensionsPath {
+    write(content: extensionsRendered, to: "\(testableExtensionsPath)/UITestableExtensions.swift")
+}
+if let tapMansPath = configuration.outputs.tapMansPath {
+    write(content: tapManRendered, to: "\(tapMansPath)/UITapMans.swift")
 }
