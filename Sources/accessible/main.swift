@@ -4,7 +4,7 @@ import PathKit
 
 
 guard let configuration = ConfigurationFactory.readConfiguration() else {
-    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/AccessibleStoryboard")
+    log.message(.error, "Cannot find or parse .accessible.yml configuration file. Please check https://github.com/ngergo100/Accessible")
     exit(0)
 }
 
@@ -17,7 +17,7 @@ guard storyboardFileNames.count > 0 else {
 let storyboardTemplates = AccessibleParser.decodeStoryboards(with: storyboardFileNames)
 
 let context: [String: Any] = ["accessibiltyEnumName": configuration.enumName ?? "Accessible",
-                              "date": DateFormatter.as.string(from: Date()),
+                              "date": DateFormatter.accessible.string(from: Date()),
                               "storyboards": storyboardTemplates]
 let enriched = try StencilContext.enrich(context: context, parameters: [])
 
