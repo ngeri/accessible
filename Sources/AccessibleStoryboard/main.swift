@@ -11,7 +11,7 @@ guard let configuration = ConfigurationFactory.readConfiguration() else {
 
 let storyboardFileNames = configuration.storyboardFileNames
 guard storyboardFileNames.count > 0 else {
-    log.message(.error, "There are no storyboard files at path: \"\(configuration.input)\"")
+    log.message(.error, "There are no storyboard files at the given paths")
     exit(0)
 }
 
@@ -96,5 +96,7 @@ let tapManRendered                   = try tapManTemplate.render(enriched)
 
 
 write(content: accessibilityIdentifiersRendered, to: "\(configuration.output)/AccessibilityIdentifiers.swift")
-write(content: extensionsRendered, to: "\(configuration.output)/Extensions.swift")
-write(content: tapManRendered, to: "\(configuration.output)/TapMans.swift")
+write(content: extensionsRendered, to: "\(configuration.output)/UITestableExtensions.swift")
+if let tapManOutput = configuration.tapManOutput {
+    write(content: tapManRendered, to: "\(tapManOutput)/TapMans.swift")
+}

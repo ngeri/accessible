@@ -3,9 +3,10 @@ import PathKit
 import Yams
 
 struct Configuration: Codable {
-    let enumName: String?
-    let input: String
+    let inputs: [String]
     let output: String
+    let enumName: String?
+    let tapManOutput: String?
 }
 
 struct ConfigurationFactory {
@@ -26,16 +27,18 @@ struct ConfigurationFactory {
 
 extension Configuration {
     var storyboardFileNames: [String] {
-        let path = Path(input)
+        let paths = inputs.map({ Path($0) })
         let storyboardExtension = "storyboard"
-        if path.isDirectory {
-            let files = FileManager.default.subpaths(atPath: path.string)
-            let storyboardFiles = files?.filter { $0.hasSuffix(storyboardExtension) }
-            let paths = storyboardFiles?.map({ (path + $0).string })
-            return paths ?? []
-        } else if path.isFile, let `extension` = path.extension, `extension` == storyboardExtension {
-            return [path.string]
+        let filePaths = paths.reduce(into: [String]()) { (result, path) in
+            if path.isDirectory {
+                let files = FileManager.default.subpaths(atPath: path.string)
+                let storyboardFiles = files?.filter({ $0.hasSuffix(storyboardExtension) }).map({ (path + $0).string })
+                result.append(contentsOf: storyboardFiles ?? [])
+            } else if path.isFile, let `extension` = path.extension, `extension` == storyboardExtension {
+                result.append(path.string)
+            }
         }
-        return []
+
+        return filePaths
     }
 }
