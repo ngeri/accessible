@@ -64,6 +64,8 @@ class ScreenUITests: XCTestCase {
 
 ## Usage <a name="usage"></a>
 
+Download the latest released binary and copy it to `/usr/local/bin/`.
+
 You should create a `.accessible.yml` configuration file in your project's root directory (next to your project file).
 ```yaml
 #enumName: Accessible
@@ -82,4 +84,8 @@ Uncomment `enumName` if you would like to provide the Accessibiliy Identifiers e
 Uncomment `testableExtensionsPath` if you would like **Accessible** to generate UITestableExtensions.swift file for you.
 
 Uncomment `tapMansPath` if you would like **Accessible** to generate UITapMans.swift file for you.
+
+If your done with the configuration file. The only thing left is calling `accessible` in the root directory of your project or set up a new run script build phase in your XCode project file.
+
+
 
