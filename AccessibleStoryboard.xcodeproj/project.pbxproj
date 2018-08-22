@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		251EBEEC212C594200289CF0 /* ConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBEEB212C594200289CF0 /* ConfigurationFactory.swift */; };
+		2550D7E9212D4C05000E1EDF /* AccessibleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2550D7E8212D4C05000E1EDF /* AccessibleParser.swift */; };
 		OBJ_221 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* DateFormatterExtension.swift */; };
 		OBJ_222 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Logger.swift */; };
 		OBJ_223 /* OutputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* OutputHandler.swift */; };
@@ -298,6 +299,7 @@
 
 /* Begin PBXFileReference section */
 		251EBEEB212C594200289CF0 /* ConfigurationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationFactory.swift; sourceTree = "<group>"; };
+		2550D7E8212D4C05000E1EDF /* AccessibleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleParser.swift; sourceTree = "<group>"; };
 		"AccessibleStoryboard::AccessibleStoryboard::Product" /* AccessibleStoryboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccessibleStoryboard; sourceTree = BUILT_PRODUCTS_DIR; };
 		"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
@@ -975,6 +977,7 @@
 				OBJ_9 /* Helpers */,
 				OBJ_14 /* Models */,
 				OBJ_19 /* Resources */,
+				2550D7E8212D4C05000E1EDF /* AccessibleParser.swift */,
 				OBJ_21 /* main.swift */,
 			);
 			name = AccessibleStoryboard;
@@ -1348,6 +1351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				2550D7E9212D4C05000E1EDF /* AccessibleParser.swift in Sources */,
 				OBJ_221 /* DateFormatterExtension.swift in Sources */,
 				OBJ_222 /* Logger.swift in Sources */,
 				OBJ_223 /* OutputHandler.swift in Sources */,
