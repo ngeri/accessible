@@ -38,11 +38,11 @@ struct Logger {
     func message(_ level: LogLevel, _ string: CustomStringConvertible) {
         switch level {
         case .info:
-            fputs(ANSIColor.blue.format("ℹ️  | \(string)\n"), stdout)
+            fputs(ANSIColor.blue.format("ℹ️  \(string)\n"), stdout)
         case .warning:
-            fputs(ANSIColor.yellow.format("⚠️  | \(string)\n"), stderr)
+            fputs(ANSIColor.yellow.format("⚠️  \(string)\n"), stderr)
         case .error:
-            fputs(ANSIColor.red.format("❌  | \(string)\n"), stderr)
+            fputs(ANSIColor.red.format("❌ \(string)\n"), stderr)
         }
     }
 
