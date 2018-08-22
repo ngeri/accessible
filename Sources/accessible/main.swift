@@ -17,7 +17,7 @@ guard storyboardFileNames.count > 0 else {
 let storyboardTemplates = AccessibleParser.decodeStoryboards(with: storyboardFileNames)
 
 let context: [String: Any] = ["accessibiltyEnumName": configuration.enumName ?? "Accessible",
-                              "date": DateFormatter.as.string(from: Date()),
+                              "date": DateFormatter.accessible.string(from: Date()),
                               "storyboards": storyboardTemplates]
 let enriched = try StencilContext.enrich(context: context, parameters: [])
 

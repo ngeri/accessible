@@ -1,7 +1,7 @@
 import Foundation
 
 extension DateFormatter {
-    static let `as`: DateFormatter = {
+    static let accessible: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .long
