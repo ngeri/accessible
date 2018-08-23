@@ -64,7 +64,7 @@ class ScreenUITests: XCTestCase {
 2. Make it executable with `chmod +x accessible`. (If you have a .dms extension then remove it first)
 3. Copy it to `/usr/local/bin/`.
 
-You should create a `.accessible.yml` configuration file in your project's root directory (next to your project file).
+4. Create a `.accessible.yml` configuration file in your project's root directory (next to your project file).
 ```yaml
 #enumName: Accessible
 inputs: 
@@ -83,7 +83,7 @@ Uncomment `testableExtensionsPath` if you would like **Accessible** to generate 
 
 Uncomment `tapMansPath` if you would like **Accessible** to generate UITapMans.swift file for you.
 
-If your done with the configuration file. The only thing left is calling `accessible` in the root directory of your project or set up a new run script build phase in your Xcode project file.
+5. Call `accessible` in the root directory of your project or set up a new run script build phase in your Xcode project file.
 
 
 
