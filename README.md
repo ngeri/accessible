@@ -64,7 +64,9 @@ class ScreenUITests: XCTestCase {
 
 ## Usage <a name="usage"></a>
 
-Download the latest released binary and copy it to `/usr/local/bin/`.
+1. Download the latest [released binary](https://github.com/ngergo100/Accessible/releases/download/0.0.1/accessible).
+2. Make it executable with chmod +x for example (If you have a .dms extension then remove it first)
+3. Copy it to `/usr/local/bin/`.
 
 You should create a `.accessible.yml` configuration file in your project's root directory (next to your project file).
 ```yaml
