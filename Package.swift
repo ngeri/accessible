@@ -4,9 +4,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "Accessible",
+    name: "AccessibleTool",
     products: [
-        .library(name: "Accessible", targets: ["Accessible"]),
+        .library(name: "AccessibleCore", targets: ["AccessibleCore"])
     ],
     dependencies: [
         .package(url: "https://github.com/ngergo100/IBDecodable", .revision("f5323c2231811256e49f5c5fc723467a7965f5fa")),
@@ -14,11 +14,8 @@ let package = Package(
         .package(url: "https://github.com/jpsim/Yams.git", from: "1.0.0")
     ],
     targets: [
-        .target(
-            name: "Accessible",
-            dependencies: ["IBDecodable", "StencilSwiftKit", "Yams"]),
-        .testTarget(
-            name: "AccessibleTests",
-            dependencies: ["Accessible"]),
+        .target(name: "AccessibleTool", dependencies: ["AccessibleCore"], path: "Sources/AccessibleTool"),
+        .target(name: "AccessibleCore", dependencies: ["IBDecodable", "StencilSwiftKit", "Yams"], path: "Sources/AccessibleCore"),
+        .testTarget(name: "AccessibleTests", dependencies: ["AccessibleCore"], path: "Tests")
     ]
 )
