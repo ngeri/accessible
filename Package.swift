@@ -4,7 +4,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "accessible",
+    name: "Accessible",
+    products: [
+        .library(name: "Accessible", targets: ["Accessible"]),
+    ],
     dependencies: [
         .package(url: "https://github.com/ngergo100/IBDecodable", .revision("f5323c2231811256e49f5c5fc723467a7965f5fa")),
         .package(url: "https://github.com/SwiftGen/StencilSwiftKit", from: "2.5.0"),
@@ -12,7 +15,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "accessible",
+            name: "Accessible",
             dependencies: ["IBDecodable", "StencilSwiftKit", "Yams"]),
+        .testTarget(
+            name: "AccessibleTests",
+            dependencies: ["Accessible"]),
     ]
 )
