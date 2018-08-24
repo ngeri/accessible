@@ -1,5 +1,3 @@
-import Foundation
-
 struct ConnectionTypeTemplate {
     let name: String
     let connections: [ConnectionTemplate]
