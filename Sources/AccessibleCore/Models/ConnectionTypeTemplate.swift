@@ -1,5 +1,3 @@
-import Foundation
-
 struct ConnectionTypeTemplate {
     let name: String
     let connections: [ConnectionTemplate]
@@ -36,7 +34,6 @@ struct ConnectionTypeTemplate {
         self.name = name.rawValue
         self.connections = connections
     }
-
 
     static func mapViewClassToViewType(type: String) -> ViewType {
         switch type {

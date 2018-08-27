@@ -23,7 +23,7 @@ struct AccessibleParser {
     // MARK: - Helpers
 
     static private func decodeScreen(scene: Scene) -> ViewControllerTemplate? {
-        guard let viewController = scene.viewController else  {
+        guard let viewController = scene.viewController else {
             log.message(.error, "An error occured for scene with id: \(scene.id)")
             return nil
         }
@@ -46,15 +46,8 @@ struct AccessibleParser {
             return ConnectionTypeTemplate(name: name, connections: connections)
         }
 
-        var viewControllerName = viewController.viewController.elementClass
-        if let customClass = viewController.viewController.customClass {
-            let lowerBound = customClass.range(of: "ViewController")?.lowerBound ?? customClass.endIndex
-            viewControllerName = String(customClass[..<lowerBound])
-        } else {
-            log.message(.warning, "Cannot detect custom class type")
-        }
-
-        return ViewControllerTemplate(name: viewControllerName, connections: templateConnections)
+        let name = viewControllerName(customClass: viewController.viewController.customClass, elementClass: viewController.viewController.elementClass)
+        return ViewControllerTemplate(name: name, connections: templateConnections)
     }
 
     static private func getAllViews(for viewController: AnyViewController) -> [ViewProtocol] {
@@ -81,5 +74,18 @@ struct AccessibleParser {
             }
         })
         return mappedConnections
+    }
+
+    static func viewControllerName(customClass: String?, elementClass: String?) -> String {
+        guard let customClass = customClass else {
+            return elementClass ?? "Unknown"
+        }
+
+        var viewControllerName = customClass
+        if let lowerBound = customClass.range(of: "ViewController")?.lowerBound, lowerBound != customClass.startIndex {
+           viewControllerName = String(customClass[..<lowerBound])
+        }
+
+        return viewControllerName
     }
 }

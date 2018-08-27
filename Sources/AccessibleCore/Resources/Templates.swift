@@ -1,4 +1,3 @@
-import Foundation
 import PathKit
 
 // Until swift package manager does not support adding resources to the project, it is inevitable to add stencil file as a string literal
