@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "IBDecodable",
-        "repositoryURL": "https://github.com/ngergo100/IBDecodable",
+        "repositoryURL": "https://github.com/IBDecodable/IBDecodable",
         "state": {
           "branch": null,
-          "revision": "f5323c2231811256e49f5c5fc723467a7965f5fa",
+          "revision": "c472ff9851f2815f3878bc9ff4edb72f5e63bc67",
           "version": null
         }
       },

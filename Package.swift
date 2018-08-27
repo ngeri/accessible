@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "AccessibleCore", targets: ["AccessibleCore"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ngergo100/IBDecodable", .revision("f5323c2231811256e49f5c5fc723467a7965f5fa")),
+        .package(url: "https://github.com/IBDecodable/IBDecodable", .revision("c472ff9851f2815f3878bc9ff4edb72f5e63bc67")),
         .package(url: "https://github.com/SwiftGen/StencilSwiftKit", from: "2.5.0"),
         .package(url: "https://github.com/jpsim/Yams.git", from: "1.0.0")
     ],
