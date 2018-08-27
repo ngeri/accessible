@@ -33,7 +33,6 @@ public class AccessibleTool {
 		let extensionsRendered               = try extensionsTemplate.render(enriched)
 		let tapManRendered                   = try tapManTemplate.render(enriched)
 
-
 		write(content: accessibilityIdentifiersRendered, to: "\(configuration.outputs.identifiersPath)/AccessibilityIdentifiers.swift")
 		if let testableExtensionsPath = configuration.outputs.testableExtensionsPath {
 		    write(content: extensionsRendered, to: "\(testableExtensionsPath)/UITestableExtensions.swift")
@@ -44,4 +43,3 @@ public class AccessibleTool {
 
 	}
 }
-

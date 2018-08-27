@@ -23,7 +23,7 @@ struct AccessibleParser {
     // MARK: - Helpers
 
     static private func decodeScreen(scene: Scene) -> ViewControllerTemplate? {
-        guard let viewController = scene.viewController else  {
+        guard let viewController = scene.viewController else {
             log.message(.error, "An error occured for scene with id: \(scene.id)")
             return nil
         }
@@ -75,17 +75,17 @@ struct AccessibleParser {
         })
         return mappedConnections
     }
-    
+
     static func viewControllerName(customClass: String?, elementClass: String?) -> String {
         guard let customClass = customClass else {
             return elementClass ?? "Unknown"
         }
-        
+
         var viewControllerName = customClass
         if let lowerBound = customClass.range(of: "ViewController")?.lowerBound, lowerBound != customClass.startIndex {
            viewControllerName = String(customClass[..<lowerBound])
         }
-        
+
         return viewControllerName
     }
 }

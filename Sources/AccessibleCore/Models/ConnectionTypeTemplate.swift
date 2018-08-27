@@ -35,7 +35,6 @@ struct ConnectionTypeTemplate {
         self.connections = connections
     }
 
-
     static func mapViewClassToViewType(type: String) -> ViewType {
         switch type {
         case "UIActivityindicatorView":     return .activityIndicators
