@@ -86,4 +86,15 @@ Uncomment `tapMansPath` if you would like **Accessible** to generate UITapMans.s
 5. Call `accessible` in the root directory of your project or set up a new run script build phase in your Xcode project file.
 
 
+## CI
+
+Master
+
+[![Build Status](https://travis-ci.org/ngergo100/Accessible.svg?branch=master)](https://travis-ci.org/ngergo100/Accessible)
+
+Development
+
+[![Build Status](https://travis-ci.org/ngergo100/Accessible.svg?branch=development)](https://travis-ci.org/ngergo100/Accessible)
+
+
 

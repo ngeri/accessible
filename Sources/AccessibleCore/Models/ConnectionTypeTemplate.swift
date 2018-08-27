@@ -4,30 +4,30 @@ struct ConnectionTypeTemplate {
 
     enum ViewType: String {
 
-        case activityIndicators = "activityIndicators"
-        case buttons = "buttons"
-        case collectionViews = "collectionViews"
-        case datePickers = "datePickers"
+        case activityIndicators
+        case buttons
+        case collectionViews
+        case datePickers
         case imageViews = "images"
-        case staticTexts = "staticTexts"
-        case navigationBars = "navigationBars"
-        case pageIndicators = "pageIndicators"
-        case pickers = "pickers"
-        case progressIndicators = "progressIndicators"
-        case scrollViews = "scrollViews"
-        case searchFields = "searchFields"
-        case segmentedControls = "segmentedControls"
-        case sliders = "sliders"
-        case otherElements = "otherElements"
-        case steppers = "steppers"
-        case switches = "switches"
-        case tabBars = "tabBars"
-        case tables = "tables"
-        case cells = "cells"
-        case textFields = "textFields"
-        case textViews = "textViews"
-        case toolbars = "toolbars"
-        case webViews = "webViews"
+        case staticTexts
+        case navigationBars
+        case pageIndicators
+        case pickers
+        case progressIndicators
+        case scrollViews
+        case searchFields
+        case segmentedControls
+        case sliders
+        case otherElements
+        case steppers
+        case switches
+        case tabBars
+        case tables
+        case cells
+        case textFields
+        case textViews
+        case toolbars
+        case webViews
     }
 
     init(name: ConnectionTypeTemplate.ViewType, connections: [ConnectionTemplate]) {

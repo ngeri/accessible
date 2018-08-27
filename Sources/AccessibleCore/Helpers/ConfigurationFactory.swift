@@ -19,14 +19,17 @@ struct ConfigurationFactory {
     static private let configFileName = ".accessible.yml"
 
     static func readConfiguration() -> Configuration? {
-        do {
-            let configurationString = try (Path.current + configFileName).read(.utf8)
-            let decoder = YAMLDecoder()
-            let configuration = try decoder.decode(Configuration.self, from: configurationString)
-            return configuration
-        } catch {
+        guard let configurationString = try? (Path.current + configFileName).read(.utf8),
+            let configuration = decodeConfiguration(configurationString) else {
             return nil
         }
+        return configuration
+    }
+
+    static func decodeConfiguration(_ configurationString: String) -> Configuration? {
+        let decoder = YAMLDecoder()
+        let configuration = try? decoder.decode(Configuration.self, from: configurationString)    
+        return configuration
     }
 }
 
