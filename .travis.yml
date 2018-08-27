@@ -1,7 +1,6 @@
 language: swift
-osx_image: xcode9.3
+osx_image: xcode9.4
 install: swift package update
 script:
   - swift build
-  - swift build -c release
   - swift test
