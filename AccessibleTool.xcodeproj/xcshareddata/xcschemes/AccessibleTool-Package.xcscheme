@@ -14,37 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Yams::CYaml"
-               BuildableName = "CYaml.framework"
-               BlueprintName = "CYaml"
-               ReferencedContainer = "container:AccessibleTool.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Stencil::Stencil"
-               BuildableName = "Stencil.framework"
-               BlueprintName = "Stencil"
-               ReferencedContainer = "container:AccessibleTool.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "StencilSwiftKit::StencilSwiftKit"
-               BuildableName = "StencilSwiftKit.framework"
-               BlueprintName = "StencilSwiftKit"
+               BlueprintIdentifier = "PathKit::PathKit"
+               BuildableName = "PathKit.framework"
+               BlueprintName = "PathKit"
                ReferencedContainer = "container:AccessibleTool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -70,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SWXMLHash::SWXMLHash"
-               BuildableName = "SWXMLHash.framework"
-               BlueprintName = "SWXMLHash"
+               BlueprintIdentifier = "StencilSwiftKit::StencilSwiftKit"
+               BuildableName = "StencilSwiftKit.framework"
+               BlueprintName = "StencilSwiftKit"
                ReferencedContainer = "container:AccessibleTool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -98,6 +70,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Yams::CYaml"
+               BuildableName = "CYaml.framework"
+               BlueprintName = "CYaml"
+               ReferencedContainer = "container:AccessibleTool.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Spectre::Spectre"
                BuildableName = "Spectre.framework"
                BlueprintName = "Spectre"
@@ -112,9 +98,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PathKit::PathKit"
-               BuildableName = "PathKit.framework"
-               BlueprintName = "PathKit"
+               BlueprintIdentifier = "AccessibleTool::AccessibleTool"
+               BuildableName = "AccessibleTool"
+               BlueprintName = "AccessibleTool"
+               ReferencedContainer = "container:AccessibleTool.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Stencil::Stencil"
+               BuildableName = "Stencil.framework"
+               BlueprintName = "Stencil"
                ReferencedContainer = "container:AccessibleTool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -140,9 +140,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AccessibleTool::AccessibleTool"
-               BuildableName = "AccessibleTool"
-               BlueprintName = "AccessibleTool"
+               BlueprintIdentifier = "SWXMLHash::SWXMLHash"
+               BuildableName = "SWXMLHash.framework"
+               BlueprintName = "SWXMLHash"
                ReferencedContainer = "container:AccessibleTool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -181,9 +181,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Yams::CYaml"
-            BuildableName = "CYaml.framework"
-            BlueprintName = "CYaml"
+            BlueprintIdentifier = "PathKit::PathKit"
+            BuildableName = "PathKit.framework"
+            BlueprintName = "PathKit"
             ReferencedContainer = "container:AccessibleTool.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
