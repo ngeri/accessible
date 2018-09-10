@@ -1,6 +1,11 @@
 
 # Accessible
 **Accessible** is tool which makes your UITesting experience way better on iOS.
+
+|CI  |Status  |
+|--|--|
+| Master |  [![Build Status](https://travis-ci.org/ngergo100/Accessible.svg?branch=master)](https://travis-ci.org/ngergo100/Accessible)|
+| Development | [![Build Status](https://travis-ci.org/ngergo100/Accessible.svg?branch=development)](https://travis-ci.org/ngergo100/Accessible)|
 #### Table of Contents
 1. [Intro](#intro)
 2. [Usages](#usage)
@@ -84,17 +89,3 @@ Uncomment `testableExtensionsPath` if you would like **Accessible** to generate 
 Uncomment `tapMansPath` if you would like **Accessible** to generate UITapMans.swift file for you.
 
 5. Call `accessible` in the root directory of your project or set up a new run script build phase in your Xcode project file.
-
-
-## CI
-
-Master
-
-[![Build Status](https://travis-ci.org/ngergo100/Accessible.svg?branch=master)](https://travis-ci.org/ngergo100/Accessible)
-
-Development
-
-[![Build Status](https://travis-ci.org/ngergo100/Accessible.svg?branch=development)](https://travis-ci.org/ngergo100/Accessible)
-
-
-
