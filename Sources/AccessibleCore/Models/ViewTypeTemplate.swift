@@ -1,6 +1,6 @@
-struct ConnectionTypeTemplate {
+struct ViewTypeTemplate {
     let name: String
-    let connections: [ConnectionTemplate]
+    let viewTemplates: [ViewTemplate]
 
     enum ViewType: String {
 
@@ -30,9 +30,9 @@ struct ConnectionTypeTemplate {
         case webViews
     }
 
-    init(name: ConnectionTypeTemplate.ViewType, connections: [ConnectionTemplate]) {
+    init(name: ViewTypeTemplate.ViewType, viewTemplates: [ViewTemplate]) {
         self.name = name.rawValue
-        self.connections = connections
+        self.viewTemplates = viewTemplates
     }
 
     static func mapViewClassToViewType(type: String) -> ViewType {

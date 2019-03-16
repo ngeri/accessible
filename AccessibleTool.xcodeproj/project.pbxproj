@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D5AAF183223D51C90092C272 /* AccessibleEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AAF182223D51C90092C272 /* AccessibleEditor.swift */; };
 		OBJ_218 /* AccessibleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AccessibleParser.swift */; };
 		OBJ_219 /* AccessibleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* AccessibleTool.swift */; };
 		OBJ_220 /* ConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ConfigurationFactory.swift */; };
@@ -28,8 +29,8 @@
 		OBJ_222 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Logger.swift */; };
 		OBJ_223 /* OutputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* OutputHandler.swift */; };
 		OBJ_224 /* ViewProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ViewProtocolExtension.swift */; };
-		OBJ_225 /* ConnectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ConnectionTemplate.swift */; };
-		OBJ_226 /* ConnectionTypeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ConnectionTypeTemplate.swift */; };
+		OBJ_225 /* ViewTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ViewTemplate.swift */; };
+		OBJ_226 /* ViewTypeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ViewTypeTemplate.swift */; };
 		OBJ_227 /* StoryboardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* StoryboardTemplate.swift */; };
 		OBJ_228 /* ViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ViewControllerTemplate.swift */; };
 		OBJ_229 /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Templates.swift */; };
@@ -423,6 +424,7 @@
 		"AccessibleTool::AccessibleCore::Product" /* AccessibleCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AccessibleCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AccessibleTool::AccessibleTests::Product" /* AccessibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AccessibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AccessibleTool::AccessibleTool::Product" /* AccessibleTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = AccessibleTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5AAF182223D51C90092C272 /* AccessibleEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleEditor.swift; sourceTree = "<group>"; };
 		"IBDecodable::IBDecodable::Product" /* IBDecodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IBDecodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngeri/Documents/Dev/Accessible/.build/checkouts/IBDecodable-113384186604234888/Package.swift"; sourceTree = "<group>"; };
 		OBJ_101 /* IBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBError.swift; sourceTree = "<group>"; };
@@ -516,10 +518,10 @@
 		OBJ_196 /* XMLIndexerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLIndexerContainer.swift; sourceTree = "<group>"; };
 		OBJ_198 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ngeri/Documents/Dev/Accessible/.build/checkouts/SWXMLHash.git-6671456613635807133/Package.swift"; sourceTree = "<group>"; };
 		OBJ_199 /* SWXMLHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
-		OBJ_20 /* ConnectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTemplate.swift; sourceTree = "<group>"; };
+		OBJ_20 /* ViewTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTemplate.swift; sourceTree = "<group>"; };
 		OBJ_200 /* XMLIndexer+XMLIndexerDeserializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XMLIndexer+XMLIndexerDeserializable.swift"; sourceTree = "<group>"; };
 		OBJ_201 /* shim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shim.swift; sourceTree = "<group>"; };
-		OBJ_21 /* ConnectionTypeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTypeTemplate.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ViewTypeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTypeTemplate.swift; sourceTree = "<group>"; };
 		OBJ_22 /* StoryboardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTemplate.swift; sourceTree = "<group>"; };
 		OBJ_23 /* ViewControllerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTemplate.swift; sourceTree = "<group>"; };
 		OBJ_25 /* Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 			children = (
 				OBJ_11 /* AccessibleParser.swift */,
 				OBJ_12 /* AccessibleTool.swift */,
+				D5AAF182223D51C90092C272 /* AccessibleEditor.swift */,
 				OBJ_13 /* Helpers */,
 				OBJ_19 /* Models */,
 				OBJ_24 /* Resources */,
@@ -900,10 +903,10 @@
 		OBJ_19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_20 /* ConnectionTemplate.swift */,
-				OBJ_21 /* ConnectionTypeTemplate.swift */,
 				OBJ_22 /* StoryboardTemplate.swift */,
 				OBJ_23 /* ViewControllerTemplate.swift */,
+				OBJ_21 /* ViewTypeTemplate.swift */,
+				OBJ_20 /* ViewTemplate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1540,8 +1543,9 @@
 				OBJ_222 /* Logger.swift in Sources */,
 				OBJ_223 /* OutputHandler.swift in Sources */,
 				OBJ_224 /* ViewProtocolExtension.swift in Sources */,
-				OBJ_225 /* ConnectionTemplate.swift in Sources */,
-				OBJ_226 /* ConnectionTypeTemplate.swift in Sources */,
+				D5AAF183223D51C90092C272 /* AccessibleEditor.swift in Sources */,
+				OBJ_225 /* ViewTemplate.swift in Sources */,
+				OBJ_226 /* ViewTypeTemplate.swift in Sources */,
 				OBJ_227 /* StoryboardTemplate.swift in Sources */,
 				OBJ_228 /* ViewControllerTemplate.swift in Sources */,
 				OBJ_229 /* Templates.swift in Sources */,
