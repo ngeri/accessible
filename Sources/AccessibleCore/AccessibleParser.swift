@@ -3,7 +3,7 @@ import IBDecodable
 
 struct AccessibleParser {
     static func decodeStoryboards(with storyboardPaths: [String]) -> [StoryboardTemplate] {
-        let storyboardTemplates: [StoryboardTemplate] = storyboardPaths.compactMap({ storyboardPath in
+        let storyboardTemplates: [StoryboardTemplate] = storyboardPaths.compactMap { storyboardPath in
             log.message(.info, "Processing \((storyboardPath as NSString).lastPathComponent)...")
             let file = try? StoryboardFile(path: storyboardPath)
 
@@ -12,16 +12,15 @@ struct AccessibleParser {
                 return nil
             }
 
-            let viewControllerTemplates: [ViewControllerTemplate] = scenes.compactMap({ AccessibleParser.decodeScreen(scene: $0) })
+            let viewControllerTemplates: [ViewControllerTemplate] = scenes.compactMap { AccessibleParser.decodeScreen(scene: $0) }
             let storyboardName = ((storyboardPath as NSString).lastPathComponent as NSString).deletingPathExtension
             let storyboardTemplate = StoryboardTemplate(name: storyboardName, viewControllers: viewControllerTemplates)
             return storyboardTemplate
-        })
+        }
         return storyboardTemplates
     }
 
     // MARK: - Helpers
-
     static private func decodeScreen(scene: Scene) -> ViewControllerTemplate? {
         guard let viewController = scene.viewController else {
             log.message(.error, "An error occured for scene with id: \(scene.id)")
@@ -50,17 +49,17 @@ struct AccessibleParser {
         return ViewControllerTemplate(name: name, connections: templateConnections)
     }
 
-    static private func getAllViews(for viewController: AnyViewController) -> [ViewProtocol] {
+    static private func getAllViews(for viewController: AnyViewController) -> [ViewProtocol & IBIdentifiable] {
         guard let rootView = viewController.viewController.rootView else {
             log.message(.info, "Cannot get root view of \(viewController.viewController.customClass ?? viewController.viewController.elementClass)")
             return []
         }
-        return [rootView] + rootView.getAllSubviews()
+        return ([rootView] + rootView.getAllSubviews()).compactMap { $0 as? (ViewProtocol & IBIdentifiable) }
     }
 
-    static private func groupConnections(outlets: [Outlet], allSubviews: [ViewProtocol]) -> [ConnectionTypeTemplate.ViewType: [ConnectionTemplate]] {
+    static private func groupConnections(outlets: [Outlet], allSubviews: [ViewProtocol & IBIdentifiable]) -> [ConnectionTypeTemplate.ViewType: [ConnectionTemplate]] {
         let mappedConnections = outlets.reduce(into: [ConnectionTypeTemplate.ViewType: [ConnectionTemplate]](), { result, outlet in
-            guard let view = allSubviews.filter({ $0.id == outlet.destination }).first else {
+            guard let view = allSubviews.first(where: { $0.id == outlet.destination }) else {
                 log.message(.info, "Outlet with name '\(outlet.property)' has no view attached.")
                 return
             }
