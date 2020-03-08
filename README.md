@@ -1,6 +1,6 @@
 
 # Accessible
-**Accessible** is tool which makes your UITesting experience way better on iOS.
+**Accessible** is a tool which makes your UITesting experience way better on iOS.
 
 |CI  |Status  |
 |--|--|
